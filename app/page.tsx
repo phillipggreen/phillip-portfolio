@@ -16,23 +16,34 @@ const featuredProjects = [
     stack: "Next.js • TypeScript • Supabase",
   },
   {
-    title: "Berea Golf Club Website",
-    description:
-      "A modern golf course website built to improve presentation, usability, and future booking workflows.",
-    stack: "Next.js • Tailwind CSS • TypeScript",
-  },
-  {
     title: "CyberDev VS Code Theme",
     description:
       "A custom developer theme project that reflects my interest in design systems, UI polish, and developer experience.",
     stack: "VS Code Extension • JSON • Theming",
   },
+  {
+    title: "KRM NXT MOD",
+    description:
+      "A Shopify storefront customized through Liquid theme edits and front-end code to deliver a tailored design and functionality for a real client.",
+    stack: "Shopify • Liquid • HTML • CSS • JavaScript",
+  },
 ];
 
 const experienceHighlights = [
-  "Continuous Improvement Quality Engineer III with a background in quality, systems thinking, and process optimization.",
+  "Continuous Improvement Engineer III with a background in quality, systems thinking, and process optimization.",
   "Experienced in root cause analysis, cross-functional problem solving, and improving operational workflows.",
-  "Transitioning into software engineering by applying engineering discipline to modern web development.",
+  "Transitioning into software and web development by applying engineering discipline to modern digital solutions.",
+];
+
+const techStack = [
+  "Next.js",
+  "TypeScript",
+  "React",
+  "Tailwind CSS",
+  "Supabase",
+  "Shopify / Liquid",
+  "Node.js",
+  "GitHub",
 ];
 
 export default function HomePage() {
@@ -40,7 +51,7 @@ export default function HomePage() {
     <main>
       <section className="mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
         <div className="inline-flex w-fit items-center rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted-foreground backdrop-blur">
-          Software Engineer • Systems Thinker • Continuous Improvement Engineer
+          Engineer • Systems Thinker • Continuous Improvement Leader
         </div>
 
         <div className="mt-8 grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
@@ -50,11 +61,11 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              I build software with an engineer’s mindset—solving problems,
-              improving systems, and creating practical digital experiences. My
-              background in quality engineering and continuous improvement
-              shapes how I approach development: thoughtfully, efficiently, and
-              with a focus on real-world impact.
+              I build digital solutions with an engineer’s mindset—solving
+              problems, improving systems, and creating practical user
+              experiences. My background in quality engineering and continuous
+              improvement shapes how I approach development: thoughtfully,
+              efficiently, and with a focus on real-world impact.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -67,10 +78,11 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/resume"
+                href="/Phillip_Green_Resume.pdf"
+                target="_blank"
                 className="rounded-2xl border border-border bg-card px-6 py-3 font-medium transition hover:border-primary hover:text-primary"
               >
-                View Resume
+                Download Resume
               </Link>
 
               <Link
@@ -103,7 +115,7 @@ export default function HomePage() {
                   <h2 className="font-semibold">Engineering Mindset</h2>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Bringing process improvement, structured problem solving, and
-                    systems thinking into software development.
+                    systems thinking into digital and software work.
                   </p>
                 </div>
               </div>
@@ -113,13 +125,33 @@ export default function HomePage() {
                 <div>
                   <h2 className="font-semibold">Computer Science Growth</h2>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Continuing to strengthen my software engineering foundation
-                    through projects, learning, and applied development work.
+                    Continuing to strengthen my technical foundation through
+                    projects, learning, and applied development work.
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-8">
+          <p className="text-sm text-primary">Tech Stack</p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            Tools I work with
+          </h2>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {techStack.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted-foreground"
+            >
+              {item}
+            </span>
+          ))}
         </div>
       </section>
 
@@ -162,13 +194,14 @@ export default function HomePage() {
           <div>
             <p className="text-sm text-primary">Professional Background</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight">
-              Built on engineering, evolving into software
+              Built on engineering, evolving into digital solutions
             </h2>
             <p className="mt-4 max-w-xl text-muted-foreground">
               My career began in manufacturing and quality-focused roles, where
               I learned how to improve systems, reduce inefficiencies, solve
               recurring problems, and support better outcomes across teams. That
-              same mindset now drives how I build software.
+              same mindset now drives how I build modern digital experiences and
+              technical solutions.
             </p>
 
             <Link
@@ -204,11 +237,11 @@ export default function HomePage() {
         <div className="rounded-[2rem] border border-border bg-card/80 p-8 md:p-10">
           <p className="text-sm text-primary">Next Step</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight">
-            Looking for opportunities to grow in software engineering
+            Building toward more opportunities in tech and engineering
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            I’m continuing to build projects, sharpen my development skills, and
-            create work that reflects both my technical growth and my real-world
+            I’m continuing to grow my skills, build projects, and create work
+            that reflects both my technical development and my real-world
             engineering background.
           </p>
 
