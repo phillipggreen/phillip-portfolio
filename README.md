@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phillip Green
 
-## Getting Started
+Continuous Improvement Engineer building practical software solutions.
 
-First, run the development server:
+---
+
+![Next.js](https://img.shields.io/badge/Next.js-Framework-black?logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue?logo=typescript)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-UI-38BDF8?logo=tailwindcss)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?logo=supabase)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
+
+---
+
+## Portfolio
+
+Live Site  
+https://phillip-portfolio-phi.vercel.app
+
+This repository contains the source code for my **developer portfolio website**.
+
+The site highlights my projects, engineering background, and development work as I continue growing in modern web development.
+
+---
+
+## About Me
+
+I am a **Continuous Improvement Engineer** with a background in:
+
+- Quality engineering
+- Root cause analysis
+- Process optimization
+- Systems thinking
+
+Alongside my engineering career, I actively build **modern web applications and development tools**.
+
+My goal is to combine **engineering discipline with software development** to create practical and efficient digital systems.
+
+---
+
+## Featured Projects
+
+### Abide
+
+A Bible study platform built to help groups stay connected through weekly studies, discussion, progress tracking, and prayer requests.
+
+Tech Stack
+
+Next.js  
+TypeScript  
+Supabase  
+PostgreSQL
+
+---
+
+### CyberDev VS Code Theme
+
+A custom Visual Studio Code theme designed to improve development ergonomics with a modern cyber-inspired aesthetic.
+
+VS Code Marketplace  
+https://marketplace.visualstudio.com/items?itemName=PhillipGreen.cyberdev
+
+GitHub  
+https://github.com/phillipggreen/cyberdev-vscode
+
+---
+
+### KRM NXT MOD
+
+A Shopify storefront customized for a real client selling golf cart parts.
+
+Tech Stack
+
+Shopify  
+Liquid  
+HTML  
+CSS  
+JavaScript
+
+Live Site  
+https://krmnxtmod.com
+
+---
+
+### Green Digital Solutions
+
+A small business website created to provide a professional digital presence for a service-based brand.
+
+Tech Stack
+
+HTML  
+CSS  
+JavaScript
+
+Live Site  
+https://greendigitalsolutions.dev
+
+---
+
+## Tech Stack
+
+This portfolio was built using modern web technologies:
+
+Next.js  
+TypeScript  
+React  
+Tailwind CSS  
+Supabase  
+Vercel
+
+---
+
+## Running the Project Locally
+
+Clone the repository
+
+```bash
+git clone https://github.com/phillipggreen/phillip-portfolio.git
+````
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The portfolio is deployed using **Vercel**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every push to the **main branch automatically triggers a new deployment**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Connect With Me
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LinkedIn
+[https://linkedin.com/in/phillipggreen](https://linkedin.com/in/phillipggreen)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub
+[https://github.com/phillipggreen](https://github.com/phillipggreen)
+
+Portfolio
+[https://phillip-portfolio-phi.vercel.app](https://phillip-portfolio-phi.vercel.app)
+
+```
+
+![Portfolio Preview](./public/portfolio-preview.png)
