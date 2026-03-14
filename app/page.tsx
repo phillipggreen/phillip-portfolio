@@ -1,65 +1,234 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  FolderGit2,
+  GraduationCap,
+  LaptopMinimal,
+  Workflow,
+} from "lucide-react";
 
-export default function Home() {
+const featuredProjects = [
+  {
+    title: "Abide",
+    description:
+      "A Bible study platform focused on groups, progress tracking, and shared study experiences.",
+    stack: "Next.js • TypeScript • Supabase",
+  },
+  {
+    title: "Berea Golf Club Website",
+    description:
+      "A modern golf course website built to improve presentation, usability, and future booking workflows.",
+    stack: "Next.js • Tailwind CSS • TypeScript",
+  },
+  {
+    title: "CyberDev VS Code Theme",
+    description:
+      "A custom developer theme project that reflects my interest in design systems, UI polish, and developer experience.",
+    stack: "VS Code Extension • JSON • Theming",
+  },
+];
+
+const experienceHighlights = [
+  "Continuous Improvement Quality Engineer III with a background in quality, systems thinking, and process optimization.",
+  "Experienced in root cause analysis, cross-functional problem solving, and improving operational workflows.",
+  "Transitioning into software engineering by applying engineering discipline to modern web development.",
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main>
+      <section className="mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+        <div className="inline-flex w-fit items-center rounded-full border border-border bg-card/80 px-4 py-2 text-sm text-muted-foreground backdrop-blur">
+          Software Engineer • Systems Thinker • Continuous Improvement Engineer
+        </div>
+
+        <div className="mt-8 grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+              Phillip Green
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+              I build software with an engineer’s mindset—solving problems,
+              improving systems, and creating practical digital experiences. My
+              background in quality engineering and continuous improvement
+              shapes how I approach development: thoughtfully, efficiently, and
+              with a focus on real-world impact.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/projects"
+                className="inline-flex items-center rounded-2xl bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:opacity-90"
+              >
+                View Projects
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+
+              <Link
+                href="/resume"
+                className="rounded-2xl border border-border bg-card px-6 py-3 font-medium transition hover:border-primary hover:text-primary"
+              >
+                View Resume
+              </Link>
+
+              <Link
+                href="/contact"
+                className="rounded-2xl border border-border bg-card px-6 py-3 font-medium transition hover:border-primary hover:text-primary"
+              >
+                Contact Me
+              </Link>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-border bg-card/80 p-6 shadow-2xl shadow-black/20 backdrop-blur">
+            <p className="text-sm font-medium text-primary">Current Snapshot</p>
+
+            <div className="mt-6 space-y-5">
+              <div className="flex items-start gap-4">
+                <LaptopMinimal className="mt-1 h-5 w-5 text-primary" />
+                <div>
+                  <h2 className="font-semibold">Modern Web Development</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Building portfolio-grade applications with Next.js,
+                    TypeScript, Tailwind CSS, and Supabase.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <Workflow className="mt-1 h-5 w-5 text-primary" />
+                <div>
+                  <h2 className="font-semibold">Engineering Mindset</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Bringing process improvement, structured problem solving, and
+                    systems thinking into software development.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <GraduationCap className="mt-1 h-5 w-5 text-primary" />
+                <div>
+                  <h2 className="font-semibold">Computer Science Growth</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Continuing to strengthen my software engineering foundation
+                    through projects, learning, and applied development work.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-sm text-primary">Featured Projects</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+              Selected work
+            </h2>
+          </div>
+
+          <Link
+            href="/projects"
+            className="hidden text-sm text-muted-foreground transition hover:text-foreground md:inline-flex"
+          >
+            See all projects
+          </Link>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <article
+              key={project.title}
+              className="rounded-[1.75rem] border border-border bg-card/80 p-6 transition hover:-translate-y-1 hover:border-primary/60"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <FolderGit2 className="h-6 w-6 text-primary" />
+              <h3 className="mt-5 text-xl font-semibold">{project.title}</h3>
+              <p className="mt-3 text-muted-foreground">
+                {project.description}
+              </p>
+              <p className="mt-5 text-sm text-primary">{project.stack}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm text-primary">Professional Background</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+              Built on engineering, evolving into software
+            </h2>
+            <p className="mt-4 max-w-xl text-muted-foreground">
+              My career began in manufacturing and quality-focused roles, where
+              I learned how to improve systems, reduce inefficiencies, solve
+              recurring problems, and support better outcomes across teams. That
+              same mindset now drives how I build software.
+            </p>
+
+            <Link
+              href="/experience"
+              className="mt-6 inline-flex items-center text-sm font-medium text-muted-foreground transition hover:text-foreground"
             >
-              Learning
-            </a>{" "}
-            center.
+              Explore experience
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="rounded-[2rem] border border-border bg-card/80 p-8">
+            <div className="flex items-center gap-3">
+              <BriefcaseBusiness className="h-5 w-5 text-primary" />
+              <p className="font-semibold">What I bring</p>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              {experienceHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-border bg-background/40 p-4 text-muted-foreground"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-[2rem] border border-border bg-card/80 p-8 md:p-10">
+          <p className="text-sm text-primary">Next Step</p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            Looking for opportunities to grow in software engineering
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            I’m continuing to build projects, sharpen my development skills, and
+            create work that reflects both my technical growth and my real-world
+            engineering background.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/contact"
+              className="rounded-2xl bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:opacity-90"
+            >
+              Get In Touch
+            </Link>
+
+            <Link
+              href="/resume"
+              className="rounded-2xl border border-border bg-background/60 px-6 py-3 font-medium transition hover:border-primary hover:text-primary"
+            >
+              Review Resume
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
