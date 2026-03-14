@@ -5,34 +5,39 @@ const projects = [
   {
     title: "Abide",
     description:
-      "A Bible study platform designed for group study, progress tracking, and shared learning experiences.",
+      "A Bible study platform designed to help life groups stay connected through weekly studies, discussion, progress tracking, and shared prayer.",
     stack: "Next.js • TypeScript • Supabase",
     codeUrl: "",
     liveUrl: "",
+    caseStudyUrl: "/projects/abide",
   },
   {
     title: "CyberDev VS Code Theme",
     description:
-      "A custom Visual Studio Code theme focused on developer ergonomics, contrast, and a modern cyber aesthetic.",
+      "A custom Visual Studio Code theme built to improve my personal development environment with a modern cyber-inspired aesthetic.",
     stack: "VS Code Extension • JSON • Theme Design",
     codeUrl: "https://github.com/phillipggreen/cyberdev-vscode",
-    liveUrl: "https://marketplace.visualstudio.com/items?itemName=PhillipGreen.cyberdev",
+    liveUrl:
+      "https://marketplace.visualstudio.com/items?itemName=PhillipGreen.cyberdev",
+    caseStudyUrl: "/projects/cyberdev-theme",
   },
   {
     title: "KRM NXT MOD",
     description:
-      "A Shopify storefront customized through Liquid theme edits and front-end code to deliver a tailored design and functionality for a real client.",
+      "A Shopify storefront customized for my uncle’s business to support online sales of golf cart parts and create a more tailored shopping experience.",
     stack: "Shopify • Liquid • HTML • CSS • JavaScript",
     liveUrl: "https://krmnxtmod.com",
     codeUrl: "",
+    caseStudyUrl: "/projects/krm-nxt-mod",
   },
   {
     title: "Green Digital Solutions Website",
     description:
-      "A small business website project focused on helping local businesses establish a digital presence with a clean and modern web presence.",
+      "A website for my small business focused on presenting services clearly and establishing a professional digital presence.",
     stack: "HTML • CSS • JavaScript",
     codeUrl: "https://github.com/phillipggreen/green-digital-solutions",
     liveUrl: "https://greendigitalsolutions.dev/",
+    caseStudyUrl: "/projects/green-digital-solutions",
   },
 ];
 
@@ -47,8 +52,8 @@ export default function ProjectsPage() {
 
         <p className="mt-4 text-muted-foreground">
           A selection of projects that reflect my interest in modern web
-          development, developer tools, and building practical software for
-          real-world use.
+          development, developer tools, real-world client work, and practical
+          software solutions.
         </p>
       </div>
 
@@ -76,12 +81,20 @@ export default function ProjectsPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={project.caseStudyUrl}
+                className="inline-flex items-center rounded-xl bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+              >
+                View Case Study
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </Link>
+
               {project.liveUrl ? (
                 <Link
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-xl bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+                  className="inline-flex items-center rounded-xl border border-border bg-background/50 px-4 py-2 text-sm font-medium transition hover:border-primary hover:text-primary"
                 >
                   Visit Site
                   <ArrowUpRight className="ml-2 h-4 w-4" />

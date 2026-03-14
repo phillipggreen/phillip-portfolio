@@ -12,27 +12,30 @@ const featuredProjects = [
   {
     title: "Abide",
     description:
-      "A Bible study platform focused on groups, progress tracking, and shared study experiences.",
+      "A Bible study platform built to help life groups stay connected through weekly studies, discussion, progress tracking, and shared prayer.",
     stack: "Next.js • TypeScript • Supabase",
+    href: "/projects/abide",
   },
   {
     title: "CyberDev VS Code Theme",
     description:
-      "A custom developer theme project that reflects my interest in design systems, UI polish, and developer experience.",
+      "A custom VS Code theme created to improve my own development experience with a modern cyber-inspired look and better visual clarity.",
     stack: "VS Code Extension • JSON • Theming",
+    href: "/projects/cyberdev-theme",
   },
   {
     title: "KRM NXT MOD",
     description:
-      "A Shopify storefront customized through Liquid theme edits and front-end code to deliver a tailored design and functionality for a real client.",
+      "A Shopify storefront I customized for my uncle’s business to help sell golf cart parts through a more tailored online shopping experience.",
     stack: "Shopify • Liquid • HTML • CSS • JavaScript",
+    href: "/projects/krm-nxt-mod",
   },
 ];
 
 const experienceHighlights = [
   "Continuous Improvement Engineer III with a background in quality, systems thinking, and process optimization.",
   "Experienced in root cause analysis, cross-functional problem solving, and improving operational workflows.",
-  "Transitioning into software and web development by applying engineering discipline to modern digital solutions.",
+  "Applying engineering discipline and practical thinking to modern digital and software solutions.",
 ];
 
 const techStack = [
@@ -68,6 +71,11 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+                Continuous Improvement Engineer building practical software
+                solutions.
+              </p>
+
+              <p className="mt-4 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
                 I build digital solutions with an engineer’s mindset—solving
                 problems, improving systems, and creating practical user
                 experiences. My background in quality engineering and continuous
@@ -194,6 +202,14 @@ export default function HomePage() {
                 {project.description}
               </p>
               <p className="mt-5 text-sm text-primary">{project.stack}</p>
+
+              <Link
+                href={project.href}
+                className="mt-6 inline-flex items-center text-sm font-medium text-muted-foreground transition hover:text-foreground"
+              >
+                View Case Study
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </article>
           ))}
         </div>
