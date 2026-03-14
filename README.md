@@ -156,6 +156,4 @@ GitHub
 Portfolio
 [https://phillip-portfolio-phi.vercel.app](https://phillip-portfolio-phi.vercel.app)
 
-```
-
 ![Portfolio Preview](./public/portfolio-preview.png)
